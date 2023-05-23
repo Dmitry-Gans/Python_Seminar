@@ -12,7 +12,7 @@ summ = int(input("Введите сумму чисел: "))
 product = int(input("Введите произведение чисел: "))
 
 x = int((- summ + ((summ**2 - 4 * product) ** 0.5)) // -2)
-if x * (summ - x) != product:
-    print("Не угадал :Ъ")
-else:
+if x * (summ - x) == product and x <= 1000:
     print(f"Первое число {x}, а второе {int(summ - x)}")
+else:
+    print("Не угадал :Ъ")
