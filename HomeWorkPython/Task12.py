@@ -16,3 +16,12 @@ if x * (summ - x) == product and x <= 1000:
     print(f"Первое число {x}, а второе {int(summ - x)}")
 else:
     print("Не угадал :Ъ")
+
+# Эталонное решение:
+
+# x = int(input())
+# y = int(input())
+# for i in range(x):
+#     for j in range(y):
+#         if x == i + j and y == i * j:
+#             print(i, j)
