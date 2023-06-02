@@ -18,11 +18,10 @@ for i in range(n):
     import random
     i = random.randint(0, 10)
     list.append(i)
-print(list)
-
-for i in list:
     if x == i:
         count += 1
+
+print(list)
 print(f"Искомое число: {x} и встречается оно {count} раз")
 
         
