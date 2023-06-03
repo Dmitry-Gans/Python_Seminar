@@ -10,10 +10,8 @@
 
 n = 7
 def fibonaci(n):
-    if n in [0, 1]:
+    if n in [0, 1]: # Равна ли n диапазону от 0 до 1 
         return 1
     return fibonaci(n-1) + fibonaci(n -2) 
 
 print(fibonaci(n))
-
-
