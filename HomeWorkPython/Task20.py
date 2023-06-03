@@ -25,43 +25,62 @@
 # ноутбук
 #     12
 
-text = str.lower(input("Введите слово: "))
-a = str.lower('A, E, I, O, U, L, N, S, T, R, А, В, Е, И, Н, О, Р, С, Т')
-b = str.lower('D, G, Д, К, Л, М, П, У')
-c = str.lower('B, C, M, P, Б, Г, Ё, Ь, Я')
-d = str.lower('F, H, V, W, Y, Й, Ы')
-e = str.lower('K, Ж, З, Х, Ц, Ч')
-k = str.lower('J, X, Ш, Э, Ю')
-l = str.lower('Q, Z, Ф, Щ, Ъ')
-sum = 0
-for i in text:
-    for j in a:
-        if i == j:
-            sum += 1
-for i in text:
-    for j in b:
-        if i == j:
-            sum += 2
-for i in text:
-    for j in c:
-        if i == j:
-            sum += 3
-for i in text:
-    for j in d:
-        if i == j:
-            sum += 4
-for i in text:
-    for j in e:
-        if i == j:
-            sum += 5
-for i in text:
-    for j in k:
-        if i == j:
-            sum += 8
-for i in text:
-    for j in l:
-        if i == j:
-            sum += 10
-print(text)
-print(f"Стоимость введенного слова: {sum}") 
+# Мой вариант:
+
+# text = str.lower(input("Введите слово: "))
+# a = str.lower('A, E, I, O, U, L, N, S, T, R, А, В, Е, И, Н, О, Р, С, Т')
+# b = str.lower('D, G, Д, К, Л, М, П, У')
+# c = str.lower('B, C, M, P, Б, Г, Ё, Ь, Я')
+# d = str.lower('F, H, V, W, Y, Й, Ы')
+# e = str.lower('K, Ж, З, Х, Ц, Ч')
+# k = str.lower('J, X, Ш, Э, Ю')
+# l = str.lower('Q, Z, Ф, Щ, Ъ')
+# sum = 0
+# for i in text:
+#     for j in a:
+#         if i == j:
+#             sum += 1
+# for i in text:
+#     for j in b:
+#         if i == j:
+#             sum += 2
+# for i in text:
+#     for j in c:
+#         if i == j:
+#             sum += 3
+# for i in text:
+#     for j in d:
+#         if i == j:
+#             sum += 4
+# for i in text:
+#     for j in e:
+#         if i == j:
+#             sum += 5
+# for i in text:
+#     for j in k:
+#         if i == j:
+#             sum += 8
+# for i in text:
+#     for j in l:
+#         if i == j:
+#             sum += 10
+# print(text)
+# print(f"Стоимость введенного слова: {sum}") 
+
+# Вариант преподавателя через словарь
+
+points_en = {1: 'AEIOULNSTR', 2: 'DG', 3: 'BCMP', 4: 'FHVWY', 5: 'K', 8: 'JZ', 10: 'QZ'}
+points_ru = {1: 'АВЕИНОРСТ', 2: 'ДКЛМПУ', 3: 'БГЁЬЯ', 4: 'ЙЫ', 5: 'ЖЗХЦЧ', 8: 'ШЭЮ', 10: 'ФЩЪ'}
+word = input().upper() # переводим все буквы в верхний регистр
+count = 0
+for i in word:
+    if i in points_en: # Если i присутствует в словаре 
+        for j in points_en: # То перебираем его строки
+            if i in points_en[j]: # Если i присутствует в ключе
+                count += j # То значение ключа суммируем
+    else:
+        for j in points_ru: # Если нет, то перебираем строки второго словоря
+            if i in points_ru[j]: # Если i присутствует в ключе
+                 count += j # То значение ключа суммируем
+print(count)
 
