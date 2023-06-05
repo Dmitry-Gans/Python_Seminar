@@ -11,11 +11,10 @@
 # Вывод: Вывод:
 # 02
 
-from random import randint
-
 n = 20
 list = []
 for i in range(n):
+    from random import randint
     list.append(randint(1,10))
 print(list)
 counter = 0
