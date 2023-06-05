@@ -14,7 +14,18 @@ if palindrom(word) == True: # Сверяем палиндром с True, так 
 else:
     print("Нет")
 
-# Второй вариант
+# Второй вариант:
+
+# def poli(s):
+#     if len(s) in [1,2]:
+#         return s[0] == s[-1]
+#     return s[0] == s[-1] and poli(s[1:-1])
+
+# a = "abccba"
+# print(poli(a))
+
+# Третий вариант
+
 # def pal(word):
 #     if len(word) == 0:
 #         return ''
