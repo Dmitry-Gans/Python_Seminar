@@ -17,15 +17,11 @@
 
 n = 7
 m = 6
-list_1 = []
-list_2 = []
+list_1 = list(map(int,input("Заполните первый массив: ").split())) # Функция "map" применяет к каждому слову функцию "int", првращая слова в целые числа и получаем список 
+list_2 = list(map(int,input("Заполните второй массив: ").split()))
 k = 0
 list_result = []
 for i in range(n):
-    list_1 = int(input("Заполните первый массив: "))
-for i in range(m):
-    list_2 = int(input("Заполните второй массив: "))
-for i in range(len(list_1)):
     if list_1[i] not in list_2:
             list_result.insert(k, list_1[i])
             k += 1
