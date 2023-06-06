@@ -25,14 +25,13 @@ for i in range(n):
     list_1 = int(input("Заполните первый массив: "))
 for i in range(m):
     list_2 = int(input("Заполните второй массив: "))
-for i in list_1:
-    for j in list_2:
-        if i != j:
-            list_result.inser(k, i)
+for i in range(len(list_1)):
+    if list_1[i] not in list_2:
+            list_result.insert(k, list_1[i])
             k += 1
 print(list_result)
 
-print(list_result)
+
 
 
 
