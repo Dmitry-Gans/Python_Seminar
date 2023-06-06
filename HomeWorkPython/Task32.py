@@ -24,14 +24,14 @@ print(list_result)
 # list_result = []
 # step = 0
 # min_number = 1
-# max_number = 20
+# max_number = 10
 # def index(list, list_result, step, min_number, max_number):
 #     for i in range(len(list)):
 #         if min_number <= list[i] <= max_number:
 #             list_result.insert(step, i)
-#             print(list_result)
-#             if step != max_number:
-#                 return index(list, list_result, step + 1, min_number, max_number)
-#             return list_result
+#             step +=1
+#             if step != len(list_result):
+#                 return index(list, list_result, step +1, min_number, max_number)
+#             else:
+#                 print(list_result)
 # index(list, list_result, step, min_number, max_number)
-# print(list_result)
