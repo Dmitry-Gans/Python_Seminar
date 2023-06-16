@@ -23,8 +23,12 @@ def print_operation_table(function, num_rows, num_columns):
     for i in range(1, num_rows+1): # Строки
         print() # Перенос строки
         for j in range(1, num_columns+1): # Столбцы
-            print(function(i,j), end = ' ') # Разделитель и перенос строки
+            print(function(i,j), end = ' ') # Разделитель
         
 print_operation_table(lambda x, y: x * y, 6, 6)
   
-
+# Второй вариант:
+# def print_operation_table(function, num_rows, num_columns):
+#     for i in range(1, num_rows+1):
+#         print(*list(map(function, [i] * num_columns, range(1, num_columns + 1))))
+# print_operation_table(lambda x, y: x * y, 6, 6)
